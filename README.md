@@ -38,8 +38,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ![image](https://github.com/noahclaxton227/azure-network-protocols/assets/150629711/ebc3c72f-eee5-41a2-ae49-a57f8d1802c2)
 
 </p>
+Two virtual machines were created on Azure. One machine running Azure and the other running Linux. These were created in order to observe how these two interact with each other through the programs of Powershell and Wireshark. 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
 
@@ -49,7 +49,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Using Powershell on VM1's machine, the private IP address of VM2 (10.0.0.5) is pinged to test the reachibility of the machine.
 </p>
 <br />
 
@@ -59,7 +59,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Azure on our computer's original operating system can filter which protocols can go through to machine 1 or 2. Just search Azure --> open network security groups --> add a new protocol --> deny ICMP. This will deny all Ping requests on that specific machine, as Ping uses the Internet Control Message Protocol. 
 </p>
 <br />
 
@@ -69,7 +69,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The protocol DHCP, (the protocol that automatically assigns IP addresses) can be used by typing the command ipconfig /renew into Powershell to renew or recieve a new IP address for that machine.
 </p>
 <br />
 
@@ -80,6 +80,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </p>
 <p>
-tcp.port == 3389 reads RDP 
+Powershell can also be utilized to read the RDP activity on the device. Just type tcp.port == 3389 into Wireshark to filter RDP protocols, and because RDP is curently in use through the VM, a vast amount of lines can be read.
 </p>
 <br />
