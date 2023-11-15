@@ -69,7 +69,7 @@ Azure on our computer's original operating system can filter which protocols can
 
 </p>
 <p>
-The protocol DHCP, (the protocol that automatically assigns IP addresses) can be used by typing the command ipconfig /renew into Powershell to renew or recieve a new IP address for that machine.
+The protocol DHCP (the protocol that automatically assigns IP addresses), can be used by typing the command ipconfig /renew into Powershell to renew or recieve a new IP address for that machine.
 </p>
 <br />
 
